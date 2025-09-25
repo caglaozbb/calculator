@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 500;
+  height: 100vh;
+  background: transparent; /* 🔹 pencereyi şeffaf bırak */
+  margin: 0;
+  app-region: drag;
+
+}
+.calculator {
+  width: 342px;
+  height: 498px;
+  border-radius: 40px;
+  background-color: #FEB0CE;
+  box-shadow:
+    inset 0 0 0 3px #ff74a9,
+    0 6px 15px rgba(0,0,0,0.18);
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.inner-base {
+  width: auto;
+  height: 429px;
+  background: #FFEEF3;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 3px #FAA1D1;
+  margin-top: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px; 
+  margin-bottom: 10px;
+  padding: 0 6px;
+}
+
+.moon {
+  font-size: 18px;
+  line-height: 21px;
+  user-select: none;
+}
+
+.right {
+  display: flex;
+  gap: 6px; /* butonlar arası boşluk */
+}
+
+.win-btn {
+  width: 21px;
+  height: 21px;
+  border: none;
+  background: none;
+  font-size: 30px;
+  line-height: 21px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+}
+
+.win-btn:hover {
+  color: #ffdee9;
+}
+
+.screen {
+  height: 84px;
+  background-color: #ededed;
+  border: 3px solid #e7e7e7;
+  border-radius: 20px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 6px 12px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  box-sizing: border-box;
+}
+
+
+.memory {
+  font-size: 0.8rem;
+  color: #686868;
+  margin-bottom: 4px;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#display {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.6rem;
+  color: #686868;
+  text-align: right;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Tuşlar alanı */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  flex: 1;
+  margin-top: 15px;
+}
+
+.buttons button {
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: #333;
+  z-index: 10;
+}
+
+.buttons button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.buttons button:active {
+  transform: translateY(1px);
+}
+
+.buttons button:active::before {
+  transform: translateY(1px);
+}
+
+
+/* Renk paleti */
+/* 1. Sıra - MRC, M-, M+, √, % */
+.btn-pink    { background: #E4AEBA; }
+.btn-pink::before    { background: #F8C0CC; }
+
+/* 2. Sıra - →, 7, 8, 9, ÷ */
+.btn-yellow  { background: #DBD0B2; }
+.btn-yellow::before  { background: #FAEDCB; }
+
+/* 3. Sıra - CE, 4, 5, 6, x */
+.btn-orange  { background: #D16B4A; color: white; }
+.btn-orange::before  { background: #FF824C; }
+.btn-purple  { background: #CEC1E2; }
+.btn-purple::before  { background: #DBCDF0; }
+
+/* 4. Sıra - AC, 1, 2, 3, - */
+.btn-red     { background: #D16B4A; color: white; }
+.btn-red::before     { background: #FF824C; }
+.btn-green   { background: #B5D0CA; }
+.btn-green::before   { background: #C9E4DE; }
+
+/* 5. Sıra - 0, 00, ., =, + */
+.btn-blue    { background: #BFD4E5; }
+.btn-blue::before    { background: #C6DEF1; }

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Electron</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+    />
+    <link href="./assets/base.css" type="text/css" rel="stylesheet" />
+    <style>
+      /* Test style to make sure CSS is working */
+      .buttons button:active {
+        transform: translateY(5px) scale(0.8) !important;
+        transition: all 0.1s ease !important;
+        background-color: red !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="calculator">
+        <div class="topbar">
+          <div class="left">
+            <span class="moon">🌙</span>
+          </div>
+          <div class="right">
+            <button class="win-btn">−</button>
+            <button class="win-btn">×</button>
+          </div>
+        </div>
+        
+
+      <div class="inner-base">
+    <div class="screen">
+      <div class="memory">MEMORY</div>
+      <div id="display">12345678900</div>
+    </div>
+    
+        <div class="buttons">
+          <button class="btn-pink">MRC</button>
+          <button class="btn-pink">M-</button>
+          <button class="btn-pink">M+</button>
+          <button class="btn-pink">√</button>
+          <button class="btn-pink">%</button>
+        
+          <button class="btn-yellow">→</button>
+          <button class="btn-yellow">7</button>
+          <button class="btn-yellow">8</button>
+          <button class="btn-yellow">9</button>
+          <button class="btn-yellow">÷</button>
+        
+          <button class="btn-orange">CE</button>
+          <button class="btn-purple">4</button>
+          <button class="btn-purple">5</button>
+          <button class="btn-purple">6</button>
+          <button class="btn-purple">x</button>
+        
+          <button class="btn-red">AC</button>
+          <button class="btn-green">1</button>
+          <button class="btn-green">2</button>
+          <button class="btn-green">3</button>
+          <button class="btn-green">-</button>
+        
+          <button class="btn-blue">0</button>
+          <button class="btn-blue">00</button>
+          <button class="btn-blue">.</button>
+          <button class="btn-blue">=</button>
+          <button class="btn-blue">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script type="module" src="./src/renderer.js"></script>
+  </body>
+</html>
