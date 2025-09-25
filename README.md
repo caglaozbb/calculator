@@ -1,6 +1,6 @@
-# calculator-app
+# calculator
 
-A minimal Electron application with JavaScript
+A minimal Electron calculator application with JavaScript
 
 ## Recommended IDE Setup
 
