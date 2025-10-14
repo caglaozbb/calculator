@@ -1,4 +1,3 @@
-=
 # 🧮 Calculator
 
 A cute and functional desktop calculator built with **Electron + Vite**, featuring a pastel UI, custom window controls, and **a memory system** like old-school calculators.
