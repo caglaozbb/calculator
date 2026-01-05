@@ -10,8 +10,11 @@ body {
   height: 100vh;
   background: transparent;
   margin: 0;
-  app-region: drag;
+  -webkit-app-region: drag;
+}
 
+button {
+  -webkit-app-region: no-drag;
 }
 .calculator {
   width: 342px;

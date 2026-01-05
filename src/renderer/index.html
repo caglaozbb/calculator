@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Electron</title>
+    <title>Calculator</title>
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta
       http-equiv="Content-Security-Policy"
@@ -19,48 +19,48 @@
             <span class="moon">🌙</span>
           </div>
           <div class="right">
-            <button class="win-btn">−</button>
-            <button class="win-btn">×</button>
+            <button class="win-btn" id="minimize">−</button>
+            <button class="win-btn" id="close">×</button>
           </div>
         </div>
         
 
       <div class="inner-base">
     <div class="screen">
-      <div class="memory">MEMORY</div>
-      <div id="display">12345678900</div>
+      <div class="memory" id="memory-indicator"></div>
+      <div id="display">0</div>
     </div>
     
         <div class="buttons">
-          <button class="btn-pink">MRC</button>
-          <button class="btn-pink">M-</button>
-          <button class="btn-pink">M+</button>
-          <button class="btn-pink">√</button>
-          <button class="btn-pink">%</button>
+          <button class="btn-pink" data-action="memory" data-value="MRC">MRC</button>
+          <button class="btn-pink" data-action="memory" data-value="M-">M-</button>
+          <button class="btn-pink" data-action="memory" data-value="M+">M+</button>
+          <button class="btn-pink" data-action="math" data-value="sqrt">√</button>
+          <button class="btn-pink" data-action="math" data-value="%">%</button>
         
-          <button class="btn-yellow">→</button>
-          <button class="btn-yellow">7</button>
-          <button class="btn-yellow">8</button>
-          <button class="btn-yellow">9</button>
-          <button class="btn-yellow">÷</button>
+          <button class="btn-yellow" data-action="delete">←</button>
+          <button class="btn-yellow" data-action="number" data-value="7">7</button>
+          <button class="btn-yellow" data-action="number" data-value="8">8</button>
+          <button class="btn-yellow" data-action="number" data-value="9">9</button>
+          <button class="btn-yellow" data-action="operator" data-value="÷">÷</button>
         
-          <button class="btn-orange">CE</button>
-          <button class="btn-purple">4</button>
-          <button class="btn-purple">5</button>
-          <button class="btn-purple">6</button>
-          <button class="btn-purple">x</button>
+          <button class="btn-orange" data-action="clear" data-value="CE">CE</button>
+          <button class="btn-purple" data-action="number" data-value="4">4</button>
+          <button class="btn-purple" data-action="number" data-value="5">5</button>
+          <button class="btn-purple" data-action="number" data-value="6">6</button>
+          <button class="btn-purple" data-action="operator" data-value="×">×</button>
         
-          <button class="btn-red">AC</button>
-          <button class="btn-green">1</button>
-          <button class="btn-green">2</button>
-          <button class="btn-green">3</button>
-          <button class="btn-green">-</button>
+          <button class="btn-red" data-action="clear" data-value="AC">AC</button>
+          <button class="btn-green" data-action="number" data-value="1">1</button>
+          <button class="btn-green" data-action="number" data-value="2">2</button>
+          <button class="btn-green" data-action="number" data-value="3">3</button>
+          <button class="btn-green" data-action="operator" data-value="-">-</button>
         
-          <button class="btn-blue">0</button>
-          <button class="btn-blue">00</button>
-          <button class="btn-blue">.</button>
-          <button class="btn-blue">=</button>
-          <button class="btn-blue">+</button>
+          <button class="btn-blue" data-action="number" data-value="0">0</button>
+          <button class="btn-blue" data-action="number" data-value="00">00</button>
+          <button class="btn-blue" data-action="decimal">.</button>
+          <button class="btn-blue" data-action="calculate">=</button>
+          <button class="btn-blue" data-action="operator" data-value="+">+</button>
         </div>
       </div>
     </div>

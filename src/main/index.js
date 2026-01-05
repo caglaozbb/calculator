@@ -61,6 +61,16 @@ app.whenReady().then(() => {
   // IPC test
   ipcMain.on('ping', () => console.log('pong'))
 
+  ipcMain.on('minimize-window', () => {
+    const win = BrowserWindow.getFocusedWindow()
+    if (win) win.minimize()
+  })
+
+  ipcMain.on('close-window', () => {
+    const win = BrowserWindow.getFocusedWindow()
+    if (win) win.close()
+  })
+
   createWindow()
 
   app.on('activate', function () {
